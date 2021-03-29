@@ -4,7 +4,7 @@
  * @Autor: Observer
  * @Date: 2021-03-29 11:19:35
  * @LastEditors: Observer
- * @LastEditTime: 2021-03-29 14:35:03
+ * @LastEditTime: 2021-03-29 21:21:51
  */
 // 引入express框架
 const express = require('express');
@@ -37,7 +37,7 @@ app.use(formidableMiddleware({
 }));
 
 // 数据库连接
-mongoose.connect('mongodb://localhost:27017/alibaixiu', { useNewUrlParser: true, useCreateIndex: true })
+mongoose.connect('mongodb://helei:123456@localhost:27017/alibaixiu', { useNewUrlParser: true, useCreateIndex: true })
     .then(() => console.log('数据库连接成功'))
     .catch(() => console.log('数据库连接失败'));
 

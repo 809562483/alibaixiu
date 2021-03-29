@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "6061d4733fd73a1d1c77d635"
+  },
+  "role": "admin",
+  "avatar": null,
+  "status": 1,
+  "nickName": "itcast",
+  "email": "itheima@itcast.cn",
+  "password": "$2b$10$iRojh53fNP6CTH.LMyQXz.bhltbhLJ/f/oud8ZBSry.hq5UGNK826",
+  "createTime": {
+    "$date": "2021-03-29T13:21:55.371Z"
+  }
+},{
+  "_id": {
+    "$oid": "6061eb606b08d82cc4c5697f"
+  },
+  "role": "admin",
+  "avatar": null,
+  "status": 1,
+  "email": "helei@qq.com",
+  "nickName": "nqwl",
+  "password": "$2b$10$OvqRJw81UAg.VzDfnFBe6umE.o//oHoDPfR2Gmwc7jGpiszY4hKMq",
+  "createTime": {
+    "$date": "2021-03-29T14:59:44.203Z"
+  }
+},{
+  "_id": {
+    "$oid": "6061f5c56b08d82cc4c56980"
+  },
+  "role": "normal",
+  "avatar": "\\uploads\\upload_cbff689050fdcb5f8ac6a95283de5955.jfif",
+  "status": 1,
+  "email": "chao@qq.com",
+  "nickName": "竹子",
+  "password": "$2b$10$AyMynboFsQSw8CLapmFA9OxP3TYo5nSu0PW43Ytn0c2DViXIAcqh2",
+  "createTime": {
+    "$date": "2021-03-29T15:44:05.652Z"
+  }
+}]
