@@ -16,11 +16,11 @@
     "$oid": "6061eb606b08d82cc4c5697f"
   },
   "role": "admin",
-  "avatar": null,
+  "avatar": "\\uploads\\upload_e37bfc78754361796d65ae5a7f485a3d.PNG",
   "status": 1,
   "email": "helei@qq.com",
   "nickName": "nqwl",
-  "password": "$2b$10$OvqRJw81UAg.VzDfnFBe6umE.o//oHoDPfR2Gmwc7jGpiszY4hKMq",
+  "password": "$2b$10$DpoIPZKXPxIjkXeyjiztY.2BULXkya1Wat00CLePzrWsBxyt1Nn6O",
   "createTime": {
     "$date": "2021-03-29T14:59:44.203Z"
   }
@@ -32,9 +32,22 @@
   "avatar": "\\uploads\\upload_cbff689050fdcb5f8ac6a95283de5955.jfif",
   "status": 1,
   "email": "chao@qq.com",
-  "nickName": "竹子",
+  "nickName": "竹子啊",
   "password": "$2b$10$AyMynboFsQSw8CLapmFA9OxP3TYo5nSu0PW43Ytn0c2DViXIAcqh2",
   "createTime": {
     "$date": "2021-03-29T15:44:05.652Z"
+  }
+},{
+  "_id": {
+    "$oid": "6062ea1b78c2de14589ab2eb"
+  },
+  "role": "admin",
+  "avatar": "",
+  "status": 1,
+  "email": "helei3@qq.com",
+  "nickName": "测试23",
+  "password": "$2b$10$7EtkqRWDgwq2cWZRwZg0B.KyY1btvI.2.4BWq3kNsPI2u/uSL.XSm",
+  "createTime": {
+    "$date": "2021-03-30T09:06:35.214Z"
   }
 }]
