@@ -4,7 +4,7 @@
  * @Autor: Observer
  * @Date: 2021-03-29 22:27:08
  * @LastEditors: Observer
- * @LastEditTime: 2021-03-29 22:27:40
+ * @LastEditTime: 2021-04-01 00:20:18
  */
 $("#logOut").on("click", function() {
     if (!confirm("真的要退出吗？")) return;
@@ -20,3 +20,10 @@ $("#logOut").on("click", function() {
         }
     })
 })
+
+function dateformat(date) {
+    date = new Date(date);
+    return date.getFullYear() + "-" + ((date.getMonth() + 1) < 10 ? ("0" + (date.getMonth() + 1)) : (date.getMonth() + 1)) + '-' + (date.getDate() < 10 ? ("0" + date.getDate()) : date.getDate()) + 'T' + (date.getHours() < 10 ? ("0" + date.getHours()) : date.getHours()) + ':' + (date.getMinutes() < 10 ? ("0" + date.getMinutes()) : date.getMinutes());
+}
+
+template.defaults.imports.dateformat = dateformat;

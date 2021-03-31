@@ -122,8 +122,63 @@
     <script src="../assets/vendors/art-template/template-web.js"></script>
     <script type="text/html" id="cateTpl">
         {{each data}}
-        <option value="{{@$value._id}}">{{$value.title}}</option>
+        <option value="{{@$value._id}}" {{$value._id==category ? 'selected' : '' }}>{{$value.title}}</option>
         {{/each}}
+    </script>
+    <script type="text/html" id="modifyTpl">
+
+        <div class="page-title">
+            <h1>编辑文章</h1>
+        </div>
+        <!-- 有错误信息时展示 -->
+        <!-- <div class="alert alert-danger">
+        <strong>错误！</strong>发生XXX错误
+      </div> -->
+        <form class="row" id="modifyForm" data-id="{{@_id}}">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="title">标题</label>
+                    <input name="title" id="title" class="form-control input-lg" type="text" placeholder="文章标题" value="{{title}}">
+                </div>
+                <div class="form-group">
+                    <label for="content">内容</label>
+                    <textarea name="content" id="content" class="form-control input-lg" cols="30" rows="10" placeholder="内容">{{content}}</textarea>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="feature">文章封面</label>
+                    <!-- show when image chose -->
+                    <img class="help-block thumbnail" style="{{thumbnail ? '' : 'display: none'}}" id="imgFeature" src="{{thumbnail}}">
+                    <input id="feature" class="form-control" type="file">
+                    <input type="hidden" name="thumbnail" id="hiddenFeature" value="{{thumbnail}}">
+                </div>
+                <div class="form-group">
+                    <label for="category">所属分类</label>
+                    <select id="category" name="category" class="form-control">
+                            <option value="1">未分类</option>
+                            <option value="2">潮生活</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="created">发布时间</label>
+                    <!-- 2020-10-30T20:00 2021-3-20T20:26 -->
+                    <!-- {{dateformat(createAt)}} -->
+                    <input name="createAt" id="created" class="form-control" type="datetime-local" readonly="readonly" value={{dateformat(createAt)}}>
+                </div>
+                <div class="form-group">
+                    <label for="status">状态</label>
+                    <select id="status" class="form-control" name="state">
+                            <option value="0" {{state == 0 ? 'checked' : '' }}>草稿</option>
+                            <option value="1" {{state == 1 ? 'checked' : '' }}>已发布</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">修改</button>
+                </div>
+            </div>
+        </form>
+
     </script>
     <script src="../assets/js/post-add.js"></script>
 </body>

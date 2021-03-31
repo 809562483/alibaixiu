@@ -63,39 +63,7 @@
                     </tr>
                 </thead>
                 <tbody id="postList">
-                    <tr>
-                        <td>随便一个名称</td>
-                        <td>小小</td>
-                        <td>潮科技</td>
-                        <td class="text-center">2016/10/07</td>
-                        <td class="text-center">已发布</td>
-                        <td class="text-center">
-                            <a href="javascript:;" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>随便一个名称</td>
-                        <td>小小</td>
-                        <td>潮科技</td>
-                        <td class="text-center">2016/10/07</td>
-                        <td class="text-center">已发布</td>
-                        <td class="text-center">
-                            <a href="javascript:;" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>随便一个名称</td>
-                        <td>小小</td>
-                        <td>潮科技</td>
-                        <td class="text-center">2016/10/07</td>
-                        <td class="text-center">已发布</td>
-                        <td class="text-center">
-                            <a href="javascript:;" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>
@@ -143,6 +111,7 @@
     <script>
         NProgress.done()
     </script>
+    <script src="../assets/js/common.js"></script>
     <script src="../assets/vendors/art-template/template-web.js"></script>
     <script type="text/html" id="postTpl">
         {{each posts}}
@@ -150,10 +119,10 @@
             <td>{{$value.title}}</td>
             <td>{{$value.author.nickName}}</td>
             <td>{{$value.category.title}}</td>
-            <td class="text-center">{{$value.createAt}}</td>
+            <td class="text-center">{{dateformat($value.createAt)}}</td>
             <td class="text-center">{{$value.state == 1 ?"已发布" :"草稿" }}</td>
             <td class="text-center">
-                <a href="javascript:;" class="btn btn-default btn-xs modify" data-id="{{@$value._id}}">编辑</a>
+                <a href="post-add.html?id={{@$value._id}}" class="btn btn-default btn-xs modify" data-id="{{@$value._id}}">编辑</a>
                 <a href="javascript:;" class="btn btn-danger btn-xs delete" data-id="{{@$value._id}}">删除</a>
             </td>
         </tr>
@@ -173,63 +142,6 @@
         {{/each}}
     </script>
     <script src="../assets/js/posts.js"></script>
-    <script>
-        var condition = {
-            category: undefined,
-            state: undefined,
-            page: undefined
-        };
-        $.ajax({
-            url: "/posts",
-            success: function(res) {
-                // console.log(res);
-                load(res)
-            }
-        })
-        $.ajax({
-            url: "/categories",
-            success: function(res) {
-                // console.log(res);
-                $("#categories").html(template("cateTpl", {
-                    data: res
-                }))
-            }
-        })
-        $("#selectForm").on("submit", function(e) {
-            var arr = $(this).serializeArray();
-            arr.forEach(ele => {
-                condition[ele.name] = ele.value == "-1" ? undefined : ele.value;
-            })
-            condition["page"] = undefined;
-            e.preventDefault();
-            $.ajax({
-                url: "/posts",
-                data: condition,
-                success: function(res) {
-                    load(res)
-                }
-            })
-        })
-        $("#pagination").on("click", "a", function() {
-            condition["page"] = $(this).attr("data-page");
-            $.ajax({
-                url: "/posts",
-                data: condition,
-                success: function(res) {
-                    load(res)
-                }
-            })
-        })
-
-        function load(res) {
-            $("#postList").html(template("postTpl", {
-                posts: res.records
-            }))
-            $("#pagination").html(template("pageTpl",
-                res
-            ))
-        }
-    </script>
 </body>
 
 </html>
