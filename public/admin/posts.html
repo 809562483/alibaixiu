@@ -1,3 +1,9 @@
+<script src="/login/status"></script>
+<script>
+    if (isLogin != true) {
+        location.href = "./login.html"
+    }
+</script>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -111,8 +117,9 @@
     <script>
         NProgress.done()
     </script>
-    <script src="../assets/js/common.js"></script>
     <script src="../assets/vendors/art-template/template-web.js"></script>
+    <script src="../assets/js/common.js"></script>
+
     <script type="text/html" id="postTpl">
         {{each posts}}
         <tr>
@@ -142,6 +149,7 @@
         {{/each}}
     </script>
     <script src="../assets/js/posts.js"></script>
+    <script src="../assets/js/common.js"></script>
 </body>
 
 </html>

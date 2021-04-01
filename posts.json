@@ -3,8 +3,8 @@
     "$oid": "60646a715c596d1aacaf1aea"
   },
   "meta": {
-    "views": 31,
-    "likes": 0,
+    "views": 37,
+    "likes": 1,
     "comments": 0
   },
   "state": 1,
@@ -28,8 +28,8 @@
     "$oid": "60646adf5c596d1aacaf1aeb"
   },
   "meta": {
-    "views": 0,
-    "likes": 0,
+    "views": 11,
+    "likes": 1,
     "comments": 0
   },
   "state": 1,
@@ -53,9 +53,9 @@
     "$oid": "60646b2a5c596d1aacaf1aec"
   },
   "meta": {
-    "views": 0,
+    "views": 1,
     "likes": 0,
-    "comments": 0
+    "comments": 1
   },
   "state": 1,
   "content": "czdasfdfdfdsf",
@@ -128,8 +128,8 @@
     "$oid": "60646b575c596d1aacaf1aef"
   },
   "meta": {
-    "views": 0,
-    "likes": 0,
+    "views": 19,
+    "likes": 2,
     "comments": 0
   },
   "state": 1,
@@ -153,9 +153,9 @@
     "$oid": "60646b6e5c596d1aacaf1af0"
   },
   "meta": {
-    "views": 0,
+    "views": 2,
     "likes": 0,
-    "comments": 0
+    "comments": 1
   },
   "state": 0,
   "content": "的撒大苏打",
@@ -228,7 +228,7 @@
     "$oid": "60646be45c596d1aacaf1af3"
   },
   "meta": {
-    "views": 0,
+    "views": 2,
     "likes": 0,
     "comments": 0
   },
@@ -353,7 +353,7 @@
     "$oid": "606488321785fe0a3cea2510"
   },
   "meta": {
-    "views": 6,
+    "views": 7,
     "likes": 0,
     "comments": 0
   },

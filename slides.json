@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "6065316f8adf352c243eaeb1"
+  },
+  "image": "\\uploads\\upload_811f05eef6e6e4a12f41f6ce98ae18a2.png",
+  "link": "dadasd",
+  "title": "轮播图2"
+},{
+  "_id": {
+    "$oid": "606531988adf352c243eaeb2"
+  },
+  "image": "\\uploads\\upload_488f301198273c1c645ae8a31348b98d.png",
+  "link": "dasdasd",
+  "title": "轮播图1"
+},{
+  "_id": {
+    "$oid": "60654c1da6dbff283889140a"
+  },
+  "image": "\\uploads\\upload_4cfa74eab0757c3bd10b242eaf11504b.PNG",
+  "link": "34234",
+  "title": "轮播图3"
+},{
+  "_id": {
+    "$oid": "60654c43a6dbff283889140b"
+  },
+  "image": "\\uploads\\upload_2bf2de8623f3789b46fed392f08f0ff7.jpg",
+  "link": "778678",
+  "title": "轮播图4"
+}]

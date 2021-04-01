@@ -4,7 +4,7 @@
  * @Autor: Observer
  * @Date: 2021-03-29 18:15:34
  * @LastEditors: Observer
- * @LastEditTime: 2021-03-29 22:00:51
+ * @LastEditTime: 2021-04-01 17:03:29
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -49,7 +49,10 @@
                         password: password
                     },
                     success: function(res) {
-                        location.href = "./index.html"
+                        if (res.role == "admin")
+                            location.href = "/admin/index.html"
+                        else
+                            location.href = "/index.html"
                     },
                     error: function(xhr) {
                         alert(JSON.parse(xhr.responseText).message)

@@ -1,3 +1,9 @@
+<script src="/login/status"></script>
+<script>
+    if (isLogin != true) {
+        location.href = "./login.html"
+    }
+</script>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -142,9 +148,9 @@
             <td>{{$value.state == 1 ? '已批准' : '未批准'}}</td>
             <td class="text-center">
                 {{if $value.state == 1}}
-                <a href="post-add.html" class="btn btn-warning btn-xs">驳回</a> {{else}}
-                <a href="post-add.html" class="btn btn-info btn-xs">批准</a> {{/if}}
-                <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
+                <a href="javascript:;" class="btn btn-warning btn-xs state" data-state="1" data-id='{{@$value._id}}'>驳回</a> {{else}}
+                <a href="javascript:;" class="btn btn-info btn-xs state" data-state="0" data-id='{{@$value._id}}'>批准</a> {{/if}}
+                <a href="javascript:;" class="btn btn-danger btn-xs delete" data-id='{{@$value._id}}'>删除</a>
 
             </td>
         </tr>
@@ -158,35 +164,6 @@
         <li><a href="javascript:;" data-page="{{page+1>pages ? pages : page+1}}">下一页</a></li>
     </script>
     <script src="../assets/js/comments.js"></script>
-    <script>
-        function load(res) {
-            $("#commentsList").html(template("commentTpl", res));
-            $("#pagination").html(template("pageTpl",
-                res
-            ))
-        }
-        $.ajax({
-            type: "get",
-            url: "/comments",
-            success: function(res) {
-                console.log(res);
-                load(res);
-            }
-        })
-        $("#pagination").on("click", "a", function() {
-            var page = $(this).attr("data-page");
-            $.ajax({
-                url: "/comments",
-                data: {
-                    page: page
-                },
-                success: function(res) {
-                    // console.log(res)
-                    load(res)
-                }
-            })
-        })
-    </script>
 </body>
 
 </html>
